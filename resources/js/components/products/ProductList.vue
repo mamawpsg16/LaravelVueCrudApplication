@@ -15,11 +15,11 @@
                         <thead>
                             <tr>
                                 <!-- <td>Image</td> -->
-                                <td>Name</td>
-                                <td>Quantity</td>
-                                <td>Type</td>
-                                <td>Price</td>
-                                <td>Actions</td>
+                                <td class="fw-bolder">Name</td>
+                                <td class="fw-bolder">Quantity</td>
+                                <td class="fw-bolder">Type</td>
+                                <td class="fw-bolder">Price</td>
+                                <td class="fw-bolder">Actions</td>
                             </tr>
                         </thead>
                         <tbody v-if="products.length > 0">
