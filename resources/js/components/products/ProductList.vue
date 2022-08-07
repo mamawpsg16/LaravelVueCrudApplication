@@ -2,13 +2,13 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-10 mb-2 text-end">
-                <button class="btn btn-outline-success" @click="addProduct()">Add Product</button>
+                <button class="btn btn-success" @click="addProduct()"><fas icon="plus" ></fas></button>
             </div>
         </div>
         <div class="col-8 mx-auto">
             <div class="card">
                 <div class="card-header">
-                    Products
+                    <h4>Products</h4>
                 </div>
                 <div class="card-body">
                     <table class="table table-responsive table-bordered">
@@ -30,8 +30,9 @@
                                 <td>{{ product.type }}</td>
                                 <td>{{ product.price }}</td>
                                 <td class="text-center d-flex justify-content-evenly">
-                                   <button class="btn btn-outline-primary" @click="editProduct(product.id)">Edit</button>
-                                   <button class="btn btn-outline-danger" @click="deleteProduct(product.id)">Delete</button>
+                                   <!-- <button class="btn btn-outline-primary" @click="editProduct(product.id)">Edit</button> -->
+                                   <button class="btn btn-primary" @click="viewProduct(product.id)"><fas icon="eye" ></fas></button>
+                                   <button class="btn btn-danger" @click="deleteProduct(product.id)"><fas icon="trash-can" ></fas></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -68,8 +69,8 @@ export default{
             .catch(errors=>{
             })
         },
-        editProduct(id){
-            this.$router.push('/product/edit/'+id)
+        viewProduct(id){
+            this.$router.push('/product/'+id)
         },
         deleteProduct(id){
             Swal.fire({

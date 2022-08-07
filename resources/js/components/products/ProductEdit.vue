@@ -10,7 +10,7 @@
                 <div class="col-6 mx-auto">
                     <div class="card">
                         <div class="card-header">
-                            Update Product
+                            <h4>{{ form.name }}</h4> 
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -47,7 +47,7 @@
                           
                             <div class="row">
                                 <div class="col-12 mb-2 text-end">
-                                    <button class="btn btn-outline-warning"  type="submit">Update</button>
+                                    <button class="btn btn-primary"  type="submit"><fas icon="floppy-disk"></fas></button>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ export default {
                 this.form.type = ''
                 this.form.quantity = ''
                 this.form.price = ''
-                this.$router.push('/')
+                this.$router.push('/product/'+this.form.id)
                 toast.fire({
                     icon:"success",
                     title:"Product updated successfully"

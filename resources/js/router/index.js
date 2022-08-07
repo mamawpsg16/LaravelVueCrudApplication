@@ -3,6 +3,7 @@ import pageNotFound from '../components/PageNotFound'
 import productList from '../components/products/ProductList'
 import productCreate from '../components/products/ProductCreate'
 import productEdit from '../components/products/ProductEdit'
+import productView from '../components/products/ProductView'
 const routes = [
     {
         path:'/',
@@ -15,6 +16,11 @@ const routes = [
     {
         path:'/product/create',
         component: productCreate
+    },
+    {
+        path:'/product/:id',
+        component: productView,
+        props:true
     },
     {
         path:'/product/edit/:id',

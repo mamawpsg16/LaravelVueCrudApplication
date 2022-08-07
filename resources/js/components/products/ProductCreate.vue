@@ -10,7 +10,7 @@
                 <div class="col-6 mx-auto">
                     <div class="card">
                         <div class="card-header">
-                            Add Product
+                            <h4>Add Product</h4> 
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -48,7 +48,7 @@
                           
                             <div class="row">
                                 <div class="col-12 mb-2 text-end">
-                                    <button class="btn btn-outline-success" >Save</button>
+                                    <button class="btn btn-primary"  type="submit"><fas icon="floppy-disk"></fas></button>
                                 </div>
                             </div>
                         </div>
